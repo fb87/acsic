@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/assets"/>
+    <qresource prefix="/">
+        <file>resources/screens/LeftPanel.qml</file>
+    </qresource>
+</RCC>
