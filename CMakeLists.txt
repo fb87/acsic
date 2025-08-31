@@ -20,6 +20,8 @@ qt_add_qml_module(appuntitled
                   components/LeftPanel.qml
                   components/RightPanel.qml
                   assets/images/car-model-s.png
+                  assets/images/car-model-s-classic.png
+                  assets/images/car-model-m-modem.png
                   assets/fonts/ProFontIIxNerdFont-Regular.ttf
 )
 

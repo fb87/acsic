@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.15
 
 Rectangle {
     id: root
-    width: parent.width * 0.2
+    width: parent.width * 0.3
     height: parent?.height ?? 1100
 
     property color topColor: "#1F1E1D"
@@ -23,7 +23,7 @@ Rectangle {
     }
 
     // 🔁 Animate topColor
-    SequentialAnimation on topColor {
+    SequentialAnimation {
         loops: Animation.Infinite
         running: true
         ColorAnimation {
@@ -39,7 +39,7 @@ Rectangle {
     }
 
     // 🔁 Animate bottomColor
-    SequentialAnimation on bottomColor {
+    SequentialAnimation {
         loops: Animation.Infinite
         running: true
         ColorAnimation {
@@ -62,7 +62,7 @@ Rectangle {
         Rectangle {
             id: topBar
             Layout.fillWidth: true
-            height: 100
+            Layout.preferredHeight: 100
             color: Qt.rgba(0.15, 0.21, 0.29, 0.5)
 
             GridLayout {
@@ -79,7 +79,6 @@ Rectangle {
 
                     Text {
                         text: "\udb83\udc4d" // power icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "red"
                         anchors.centerIn: parent
@@ -93,7 +92,6 @@ Rectangle {
 
                     Text {
                         text: "\udb83\udd64" // gear icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "orange"
                         anchors.centerIn: parent
@@ -107,7 +105,6 @@ Rectangle {
 
                     Text {
                         text: "\udb83\udc4a" // folder icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "white"
                         anchors.centerIn: parent
@@ -132,7 +129,6 @@ Rectangle {
                 Text {
                     text: "\ueab5120\ueab6"
                     font.pixelSize: 120
-                    font.family: nerdFont.name
                     font.bold: true
                     color: "cyan"
                     style: Text.Outline
@@ -143,7 +139,6 @@ Rectangle {
                 // 🏷️ Unit
                 Text {
                     text: "km/h"
-                    font.family: nerdFont.name
                     font.pixelSize: 28
                     color: "white"
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -158,9 +153,10 @@ Rectangle {
                     source: "../assets/images/car-model-s.png"
                     fillMode: Image.PreserveAspectFit
                     smooth: true
-                    width: parent.width * 0.8
+                    width: parent.width * 0.6
                     height: undefined
                     anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
         }
@@ -169,7 +165,7 @@ Rectangle {
         Rectangle {
             id: bottomBar
             Layout.fillWidth: true
-            height: 100
+            Layout.preferredHeight: 100
             color: Qt.rgba(0.15, 0.21, 0.29, 0.5)
 
             GridLayout {
@@ -186,7 +182,6 @@ Rectangle {
 
                     Text {
                         text: "\udb80\udd0b" // power icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "white"
                         anchors.centerIn: parent
@@ -200,7 +195,6 @@ Rectangle {
 
                     Text {
                         text: "\udb83\udd62" // gear icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "white"
                         anchors.centerIn: parent
@@ -214,7 +208,6 @@ Rectangle {
 
                     Text {
                         text: "\udb83\udd61" // folder icon
-                        font.family: nerdFont.name
                         font.pixelSize: 50
                         color: "red"
                         anchors.centerIn: parent
